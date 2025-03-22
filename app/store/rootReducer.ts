@@ -1,4 +1,4 @@
-import { combineReducers, Reducer } from "redux";
+import { combineReducers } from "redux";
 import { productsSlice } from "./features/products/productsSlice";
 import { productsApi } from "./features/products/productsApi";
 
