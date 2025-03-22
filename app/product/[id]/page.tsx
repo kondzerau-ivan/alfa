@@ -8,7 +8,7 @@ import IProduct from "../../store/features/products/IProduct";
 
 const ProductPage = () => {
   const router = useRouter();
-  let { id } = useParams<{ id: string }>();
+  const { id } = useParams<{ id: string }>();
   const product: IProduct | undefined = useAppSelector((state) => selectProductById(state, parseInt(id)))
   if (!product) {
     notFound();
