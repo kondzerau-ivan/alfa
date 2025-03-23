@@ -29,6 +29,8 @@ const ProductCreate = () => {
       category: Yup.string(),
       rate: Yup.number()
         .typeError('The "rate" field must be a number')
+        .max(5, 'The "rating" should be less than or equal to 5')
+        .min(1, 'The "rating" should be greater than or equal to 1')
         .nullable(),
       count: Yup.number()
         .typeError('The "count" field must be a number')
