@@ -6,7 +6,6 @@ import { toggleFavorites } from "../store/features/products/productsSlice";
 const Filter = () => {
   const dispatch = useAppDispatch();
   const showFavoritesOnly = useAppSelector((state) => state.catalog.showFavoritesOnly);
-
   const handleChange = () => {
     dispatch(toggleFavorites());
   }

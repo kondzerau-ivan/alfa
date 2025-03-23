@@ -3,7 +3,7 @@ interface IProduct {
   title: string;
   description: string;
   image: string;
-  isFavorite: boolean;
+  isFavorite?: boolean;
   category?: string;
   rating?: {
     rate?: number;

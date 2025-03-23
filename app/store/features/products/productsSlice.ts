@@ -29,8 +29,11 @@ export const productsSlice = createSlice({
     },
     deleteProduct(state, action: PayloadAction<number>) {
       return ({...state, products: state.products.filter(p => p.id !== action.payload)});
-    }
+    },
+    addProduct(state, action: PayloadAction<IProduct>) {
+      return ({...state, products: [...state.products, action.payload]});
+    },
   },
 });
 
-export const { setProducts, toggleFavorites, toggleFavorite, deleteProduct } = productsSlice.actions;
+export const { setProducts, toggleFavorites, toggleFavorite, deleteProduct, addProduct } = productsSlice.actions;

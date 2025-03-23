@@ -13,3 +13,7 @@ export const selectFilteredProducts = createSelector(
 export const selectProductById = (state: { catalog: IState }, id: number) => {
   return state.catalog.products.find(p => p.id === id);
 }
+
+export const selectLastProductId = (state: { catalog: IState }) => {
+  return state.catalog.products.length ? state.catalog.products[state.catalog.products.length - 1].id : 0;
+}
