@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect } from "react";
-import Link from "next/link";
 import { setProducts } from "../store/features/products/productsSlice";
 import { selectFilteredProducts } from "../store/features/products/productsSelectors";
 import Product from "./Product";
